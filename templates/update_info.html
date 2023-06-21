@@ -1,0 +1,27 @@
+{% extends "curd_app_gui.html" %}
+
+{% block update %}
+
+<br>
+<br>
+{% if result3 %}
+<h4>{{ result3 }}</h4>
+{% endif %}
+<br>
+<br>
+<form action="/update_info" method="post">
+     <label>COMPANYNAME</label><br>
+    <input type="text" id="companyname" name="companyname" placeholder="Enter your text here"><br>
+
+    <label>OWNERS</label><br>
+    <input type="text" id="owners" name="owners" placeholder="Enter your text here"><br>
+
+    <label>LOCATION</label><br>
+    <input type="text" id="location" name="location" placeholder="Enter your text here"><br>
+
+    <label>TURNOVER</label><br>
+    <input type="text" id="turnover" name="turnover" placeholder="Enter your text here"><br>
+
+     <input type="submit" value="Submit">
+</form>
+{% endblock %}

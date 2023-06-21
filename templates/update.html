@@ -1,0 +1,18 @@
+{% extends "curd_app_gui.html" %}
+
+{% block update %}
+<div>
+    <br>
+    <br>
+    <form action="/update_id" method="post">
+    <label>ID</label><br>
+    <input type="text" id="update" name="update" placeholder="Enter your text here"><br>
+
+
+
+    <!-- form fields go here -->
+    <input type="submit" value="Submit">
+    </form>
+
+</div>
+{% endblock %}

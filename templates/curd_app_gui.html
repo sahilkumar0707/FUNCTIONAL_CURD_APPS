@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+    float:left;
+}
+  </style>
+</head>
+<body>
+
+<form action="/script1" method="post">
+    <div class="inner"><button type="submit" class = 'btn'>READ</button></div>
+</form>
+
+
+<form action="/delete" method="post">
+   <div class="inner"><button type="submit" class="btn">DELETE</button></div>
+</form>
+
+
+<form action="/create" method="post">
+   <div class="inner"><button type="submit" class="btn">CREATE</button></div>
+</form>
+
+
+<form action="/update" method="post">
+    <div class="inner"><button type="submit" class="btn">UPDATE</button></div>
+</form>
+{% block update %}
+
+{%endblock%}
+
+{% block creat %}
+
+{%endblock%}
+
+{% block read %}
+
+{%endblock%}
+
+{% block delete %}
+
+{%endblock%}
+</body>
+</html>

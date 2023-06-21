@@ -1,0 +1,31 @@
+{% extends "curd_app_gui.html" %}
+
+{% block creat %}
+<div>
+ <br>
+ <br>
+   <form action="/create_done" method="post">
+    <label>ID</label><br>
+    <input type="text" id="id" name="id" placeholder="Enter your text here"><br>
+
+    <label>COMPANYNAME</label><br>
+    <input type="text" id="companyname" name="companyname" placeholder="Enter your text here"><br>
+
+    <label>OWNERS</label><br>
+    <input type="text" id="owners" name="owners" placeholder="Enter your text here"><br>
+
+    <label>LOCATION</label><br>
+    <input type="text" id="location" name="location" placeholder="Enter your text here"><br>
+
+    <label>TURNOVER</label><br>
+    <input type="text" id="turnover" name="turnover" placeholder="Enter your text here"><br>
+
+
+    <!-- form fields go here -->
+    <input type="submit" value="Submit">
+    </form>
+{% if result11 %}
+<h4>{{ result11 }}</h4>
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% extends "curd_app_gui.html" %}
+
+{% block delete %}
+<div>
+    <br>
+    <br>
+    <label>input id number which you want to delete</label><br>
+    <form action="/delete_done" method="post">
+    <input type="text" id="delete" name="delete" placeholder="Enter your text here">
+    <!-- form fields go here -->
+    <input type="submit" value="Submit">
+    </form>
+
+
+</div>
+
+{% endblock %}
+
+

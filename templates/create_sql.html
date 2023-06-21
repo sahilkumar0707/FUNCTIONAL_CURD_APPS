@@ -1,0 +1,13 @@
+ mycursor = db.cursor(buffered=True)
+    # Code to handle the second button click
+    # Execute the desired Python script for button 2
+    id = request.form.get('id')
+    companyname = request.form.get('companyname')
+    owners = request.form.get('owners')
+    location = request.form.get('location')
+    turnover = request.form.get('turnover')
+    create_result = [id,companyname,owners,location,turnover]
+    curd_app_database.create_record(id, companyname,owners,location,turnover)
+    mycursor.execute('INSERT INTO FRONT (ID, COMPANYNAME, OWNERS , LOCATION, TURNOVER) VALUES(%s ,%s, %s, %s, %s)',
+                     (id, companyname, owners, location, turnover))
+    db.commit()
