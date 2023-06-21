@@ -3,7 +3,7 @@ import mysql.connector
 import curd_app_database
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = 'SAHILKUMAR'
 
 @app.route('/')
 def index():
